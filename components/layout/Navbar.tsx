@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Heart } from "lucide-react";
 import { navLinks } from "@/constants";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -46,7 +47,7 @@ export const Navbar = () => {
 
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className={`text-sm font-medium transition-colors hover:text-accent ${
@@ -54,10 +55,10 @@ export const Navbar = () => {
                 }`}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              Get Involved
+            <Button className="bg-primary hover:bg-primary/80 text-white">
+              Donate
             </Button>
           </div>
 
@@ -82,18 +83,18 @@ export const Navbar = () => {
           <div className="md:hidden pb-6 bg-white rounded-b-lg shadow-lg">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   className="text-foreground hover:text-accent transition-colors px-4 py-2"
                   onClick={toggleMenu}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
               <div className="px-4">
-                <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-                  Get Involved
+                <Button className="w-full bg-primary hover:bg-primary/80 text-white">
+                  Donate
                 </Button>
               </div>
             </div>

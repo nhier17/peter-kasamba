@@ -20,10 +20,6 @@ export const navLinks = [
     href: "/newsletter",
   },
   {
-    label: "Donate",
-    href: "/donate",
-  },
-  {
     label: "Get Involved",
     href: "/get-involved",
   },

@@ -4,11 +4,11 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export const Hero = () => {
   return (
     <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
       <div className="absolute inset-0">
         <Image
           src="/images/mission1.jpg"
@@ -19,7 +19,6 @@ export const Hero = () => {
         />
       </div>
 
-      {/* Overlay Content */}
       <motion.div
         initial={{ opacity: 0, y: 25 }}
         animate={{ opacity: 1, y: 0 }}
@@ -39,26 +38,25 @@ export const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
             size="lg"
-            className="bg-yellow-500 text-gray-900 hover:bg-yellow-400 transition"
+            className="bg-primary hover:bg-primary/80  transition"
             asChild
           >
-            <a href="/get-involved" className="flex items-center gap-2">
+            <Link href="/get-involved" className="flex items-center gap-2">
               Join the Mission <ArrowRight className="w-4 h-4" />
-            </a>
+            </Link>
           </Button>
 
           <Button
             size="lg"
             variant="outline"
-            className="border-white text-white hover:bg-white hover:text-gray-900 transition"
+            className="border border-white text-dark-100 hover:bg-white hover:text-gray-900 transition"
             asChild
           >
-            <a href="/about">Learn More</a>
+            <Link href="/about">Learn More</Link>
           </Button>
         </div>
       </motion.div>
 
-      {/* Subtle Overlay Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black/60 to-transparent" />
     </section>
   )
