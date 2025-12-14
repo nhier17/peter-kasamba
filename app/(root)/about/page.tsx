@@ -56,7 +56,6 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 h-12 bg-background rounded-t-[40px]"></div>
     </section>
 
     <section className="relative section-padding bg-gradient-to-b from-amber-50/40 via-white to-amber-50/30">
@@ -70,7 +69,7 @@ export default function AboutPage() {
             className="relative w-full rounded-xl-clip shadow-xl"
           >
             <Image
-              src="/images/peter.jpg"
+              src="/images/miss.JPG"
               alt="Pastor Peter Kasamba preaching during outreach"
               width={700}
               height={300}

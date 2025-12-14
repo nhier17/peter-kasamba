@@ -34,7 +34,7 @@ export default function ContactPage() {
                             <CardContent className="p-6">
                                 <h2 className="text-xl font-semibold mb-2">Mission Headquarters</h2>
                                 <p className="text-muted-foreground">
-                                    Bunju & Bagamoyo Baptist Church  
+                                    Neno & Ndumo Baptist Church  
                                     <br /> Dar es Salaam, Tanzania
                                 </p>
                             </CardContent>

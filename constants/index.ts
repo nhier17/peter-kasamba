@@ -86,7 +86,7 @@ export const areas = [
     description:
       "Water, food security and education projects that serve physical needs and open doors for lasting church and community transformation.",
     icon: Droplet,
-    image: "/images/women.JPG",
+    image: "/images/women.jpg",
   },
 ];
 
