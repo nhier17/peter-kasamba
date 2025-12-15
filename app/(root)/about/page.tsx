@@ -152,40 +152,83 @@ export default function AboutPage() {
       </div>
     </section>
 
-     <section className="section-padding bg-amber-50/40 rounded-xl px-4">
-      <div className="grid lg:grid-cols-2 gap-8 items-start">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="heading-3">Vision Statement</h3>
-          <p className="mt-4 body-regular">
-            Our vision is to see vibrant, Christ-centered communities across Tanzania
-            — churches that worship, disciple, and serve their neighbors. We believe
-            the Gospel transforms both heart and community, and we pursue holistic change
-            through prayer, teaching, and practical service.
-          </p>
-        </motion.div>
+    <section className="section bg-gradient-to-b from-amber-50/40 via-white to-amber-50/30 rounded-xl">
+      <div className="px-6">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <motion.div
+            initial={{ opacity: 0, x: -24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <p className="eyebrow mb-3">Purpose & Direction</p>
 
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+            <h2 className="heading-3 mb-6 font-bebas-neue tracking-wide">
+              The Heart of the Mission
+            </h2>
+
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold mb-3 text-foreground">
+                Mission
+              </h3>
+              <p className="body-regular text-muted-foreground">
+                To make Christ known by reaching the unreached, discipling believers,
+                and serving communities with compassion through church planting,
+                evangelism, and practical community development.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-3 text-foreground">
+                Vision
+              </h3>
+              <p className="body-regular text-muted-foreground">
+                To see lives changed, churches established, and communities uplifted
+                through God’s love across Tanzania and beyond.
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <p className="eyebrow mb-3">What Guides the Work</p>
+
+            <h3 className="heading-4 mb-6 font-semibold">
+              Core Values
+            </h3>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {values.map((value) => (
+                <Card
+                  key={value}
+                  className="card hover:shadow-md transition-shadow"
+                >
+                  <CardContent className="p-5 flex items-center gap-3">
+                    <span className="h-2 w-2 rounded-full bg-amber-500 flex-shrink-0" />
+                    <p className="text-sm font-medium text-foreground">
+                      {value}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
           viewport={{ once: true }}
+          className="mt-16 text-center italic text-muted-foreground max-w-2xl mx-auto"
         >
-          <h4 className="text-lg font-semibold mb-4">Core Values</h4>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {values.map((v) => (
-              <Card key={v} className="border-0 shadow-sm">
-                <CardContent className="p-4">
-                  <p className="text-sm font-medium">{v}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </motion.div>
+          “How can they hear without someone preaching to them? And how can
+          anyone preach unless they are sent?” — Romans 10:14–15
+        </motion.p>
       </div>
     </section>
 
